@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"/>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<script>
+/* The way that this is written everything with the green background activates the hover over. Need to figure out a way to seperate the in line element so only the button activates the hover over */
+
+
+.dropbutton {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: line;
+  border-color:red;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content, this was rewritten to work with bootstrap. It extends exactly as far as the first line. Margin is in place to show seperation and to make sure there is no bleed out */
+
+.dropdown {
+  
+background-color: #4CAF50;
+margin-bottom:20px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  
+  
+  /* removes the typically present underline in the individual links\/*/
+  text-decoration: none;
+  
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+
+
+/* Show the dropdown menu on hover 
+This is a bit layered need to breakdown for better understanding*/
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* All the info needed to make the basic horizontal menu ^^^*/
+
+
+
+
+.container-fluid{
+
+  
+}
+
+#d1 {
+  background-color: lightblue;
+  padding-bottom: 100%; 
+  margin-bottom: -100%;
+  width:20%;
+}
+
+#d2 {
+  width:60%;
+  /*Padding: properties are used to generate space around an element's content, inside of any defined borders.
+ Can be direct to top,right,left,bottom or all around*/
+  
+ 
+   background-color: lightgray;
+  background-image: url("<img src="https://image.ibb.co/hKe78z/Aspirin-B-3-D-balls.png" alt="Aspirin-B-3-D-balls" border="0">");
+  
+  
+  /*This width is partly responsible for the columns being so even. Dont forget to add it in the future*/
+
+
+  /* background-repeat:
+  Used to prevent a background image from naturally repeating either horizontally vertically or both ways 
+  */
+  background-repeat: no-repeat;
+  /*text-align: Self explanatory*/
+   text-align:center;
+  /*justify will overide other aligns and make it so each line goes an equal width across the page */
+    text-align: justify;
+  
+  
+  
+   /* This is just to fill the bottom of the page with the designated background color, It might not be good for practical use*/
+  padding-bottom: 100%; 
+  margin-bottom: -100%;
+}
+
+
+#d4 {
+  width:20%;
+  background-color: gray;  
+  padding-bottom: 100%; 
+  margin-bottom: -100%;
+  font-size:20px;
+  color:white;
+}
+
+
+.pill{
+  height:30%;
+}
+
+
+</script>
+
+<body>
+
+  <div class="container-fluid row">
+
+    <div class="dropdown col 1-3">
+      <button class="dropbutton">Dropdown#1 </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown col 1-3">
+      <button class="dropbutton">Dropdown#2</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown col 1-3">
+      <button class="dropbutton  ">Dropdown#3</button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-fluid row">
+
+    <div id="d1" class="col">
+
+      <p>Filler text</p>
+
+      </br>
+
+      <h3 style="color:blue">
+      Dont forget to add your bootstrap libraries, Reminding myself because I forget to do this waayy too often.
+      </h3>
+
+    </div>
+
+    <div id="d2" class="col">
+      Filler text
+      
+       <h3>
+        I do believe this can make a good starter page for the website
+      
+           
+           </h3>
+    
+     
+           
+    </div>
+
+
+
+    <div id="d4" class="col">
+      Filler text
+      
+      <p> A big part of web development is something called media queries. The default stuff is great and makes the work a lot faster for everything from a tablet to bigger displays.
+        Phones can be a problem though and I  need to make a specific query to make the page display the right way in portrait mode on small screens like phones </p>
+        
+    </div>
+
+  </div>
+
+</body>
+
+</html>
